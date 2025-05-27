@@ -1,0 +1,7 @@
+asyncio==3.4.3
+psycopg2==2.9.10
+flask
+
+aiogram==3.17.0 #!
+openai==1.60.2 #!
+typing_extensions==4.12.2
