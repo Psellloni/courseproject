@@ -11,7 +11,11 @@ def api_check_text():
     if not data or 'text' not in data:
         return jsonify({"error": "Missing 'text' in request"}), 400
     
-    result = check_batch({'id':228, 'text': data['text']}, rules_dict)
+    for i in list(rules_dict.keys()):
+        if not data['rules'][i]:
+            del rules_dict[i]
+    
+    result = check_batch({'id':data['id'], 'text': data['text']}, data['rules'])
     return jsonify({"result": result})
 
 if __name__ == '__main__':

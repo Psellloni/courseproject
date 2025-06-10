@@ -1,8 +1,6 @@
-rules = [  
-    'Direct calls to physical violence',  
-    'Calls to repeat terrorist acts/mass killings',  
-    'Violence based on nationality/ethnicity',  
-    'Political discussions'  
-]  
-
-rules_dict = {i: rule for i, rule in enumerate(rules, start=1)}
+rules_dict = { 
+    'violence': 'Direct calls to physical violence',  
+    'terrorism': 'Calls to repeat terrorist acts/mass killings',  
+    'racism': 'Violence based on nationality/ethnicity',  
+    'politics': 'Political discussions'  
+}
